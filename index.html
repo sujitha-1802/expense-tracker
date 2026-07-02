@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="container">
+
+    <button id="toggleDark">🌙 Toggle Theme</button>
+
+    <h1>Expense Tracker 💰</h1>
+
+    <div class="balance">
+      <h2>Your Balance</h2>
+      <h3 id="balance">₹0</h3>
+    </div>
+
+    <div class="summary">
+      <div>
+        <h4>Income</h4>
+        <p id="income">₹0</p>
+      </div>
+      <div>
+        <h4>Expense</h4>
+        <p id="expense">₹0</p>
+      </div>
+    </div>
+
+    <canvas id="chart" width="300" height="200"></canvas>
+
+    <div class="budget">
+      <input type="number" id="budgetInput" placeholder="Set monthly budget" />
+      <p id="budgetStatus"></p>
+    </div>
+
+    <h3>Transactions</h3>
+    <ul id="list"></ul>
+
+    <h3>Add Transaction</h3>
+
+    <form id="form">
+      <input type="text" id="text" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="+ income / - expense" required />
+
+      <select id="category" required>
+        <option value="">Category</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <button type="submit">Add</button>
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

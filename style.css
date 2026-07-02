@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Modern gradient (clean fintech vibe) */
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  color: #e5e7eb;
+}
+
+/* MAIN CARD */
+.container {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 22px;
+
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+/* BALANCE */
+.balance {
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  margin-bottom: 15px;
+}
+
+.balance h3 {
+  font-size: 28px;
+  color: #38bdf8;
+}
+
+/* SUMMARY CARDS */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.summary div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+#income {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+#expense {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+/* CANVAS */
+canvas {
+  width: 100%;
+  margin: 10px 0;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/* BUDGET */
+.budget {
+  margin: 10px 0;
+}
+
+#budgetStatus {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* TRANSACTIONS LIST */
+#list {
+  list-style: none;
+  max-height: 160px;
+  overflow-y: auto;
+  margin: 10px 0;
+  padding-right: 5px;
+}
+
+#list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+
+  transition: 0.2s ease;
+}
+
+#list li:hover {
+  transform: scale(1.02);
+  background: rgba(255,255,255,0.1);
+}
+
+#list li button {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#list li button:hover {
+  background: #dc2626;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* BUTTON */
+button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(56,189,248,0.2);
+}
+
+/* DARK MODE OVERRIDE */
+.dark {
+  background: #0b0f19;
+}
+
+.dark .container {
+  background: rgba(255,255,255,0.04);
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+  .container {
+    width: 92%;
+  }
+}
